@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Test
+</title>
+<link rel="stylesheet" type="text/css" href="custom.css">
+<script src="validate.js"></script>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<script type="text/javascript src="EventHelpers.js"></script>
+<script type="text/javascript" src="config-2.0.js"></script>
+
+	<script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+
+		<script> 
+		
+		
+		var var1;
+		
+		var1=window.location.hash.substring(1);
+		
+		var myFirebaseRef = new Firebase("https://testshivani.firebaseio.com/");
+		if(var1=="p1")
+		{
+			
+									
+			myFirebaseRef.child("news1").on("value", function(snapshot) {
+			
+				var x=snapshot.val();  // Alerts "San Francisco"
+				document.getElementById("1").innerHTML=x;
+			});
+
+			myFirebaseRef.child("newsText").on("value", function(snapshot) {
+			
+				var x=snapshot.val();  // Alerts "San Francisco"
+				document.getElementById("2").innerHTML=x;
+			});
+		
+		}
+		else if(var1=="p2")
+		{
+			myFirebaseRef.child("news2").on("value", function(snapshot) {
+			
+				var x=snapshot.val();  // Alerts "San Francisco"
+				document.getElementById("1").innerHTML=x;
+			});
+
+			myFirebaseRef.child("newsText2").on("value", function(snapshot) {
+			
+				var x=snapshot.val();  // Alerts "San Francisco"
+				document.getElementById("2").innerHTML=x;
+			});
+		}
+		else if(var1=="p3")
+		{
+			myFirebaseRef.child("news3").on("value", function(snapshot) {
+			
+				var x=snapshot.val();  // Alerts "San Francisco"
+				document.getElementById("1").innerHTML=x;
+			});
+
+			myFirebaseRef.child("newsText3").on("value", function(snapshot) {
+			
+				var x=snapshot.val();  // Alerts "San Francisco"
+				document.getElementById("2").innerHTML=x;
+			});
+		}
+		else if(var1=="p4")
+		{
+
+			myFirebaseRef.child("news4").on("value", function(snapshot) {
+			
+				var x=snapshot.val();  // Alerts "San Francisco"
+				document.getElementById("1").innerHTML=x;
+			});
+
+			myFirebaseRef.child("newsText4").on("value", function(snapshot) {
+			
+				var x=snapshot.val();  // Alerts "San Francisco"
+				document.getElementById("2").innerHTML=x;
+			});
+
+		}	
+		</script>
+
+</head>
+<body>
+
+<div class="header" id="grad4">
+
+	<div class="head1">
+		<h1 align="center">SEARS HOLDINGS</h1>
+		<h1 align="center">INDIA</h1>
+    </div>
+</div>
+
+
+
+<div class="container" id="grad3" >
+	
+	<div class="border1" style="height:auto;">
+		<h1 align="center">Latest News</h1>
+		
+					<div id="1"></div><br>	
+					<div id="2"></div>	
+
+	</div>
+</div>
+
+<div class=" footer" id="grad5">
+	
+	
+	
+		<span class="l1">
+			<font color="black">
+				<div>
+					<h3>Sears Address:</h3>
+				</div>
+
+				<div><i class="fa fa-home fa-2x"></i> Address: SEARS IT and Management Services India,<br> EON Free Zone, Cluster C,Wing 2, 7th Floor,<br> MIDC Kharadi Knowledge Park,<br>Pune 411 014.</div>
+				<br>
+				<i class="fa fa-phone fa-2x"></i> +91-9876543210
+			</font>
+		</span>
+	
+
+		<span class="r1">
+			
+			<form name="fname" onsubmit="return formValidation()">
+				<font color="black">
+					<h4>Feedback:</h4>
+				
+					Name:<input type="text" name="uname"  id="uname" size="40"/><br><br>
+					Email:<input type="text" name="email"  id="email" size="40" /><br><br>
+					Message : <br><textarea rows="4" cols="50" name="msg" id="msg" ></textarea><br>
+					<input type=submit value="Submit" >
+					<p id="output"></p>
+				</font>
+			</form>
+		</span>
+	
+
+</div>
+
+</body>
+</html>
